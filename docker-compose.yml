@@ -1,9 +1,9 @@
-version: "3.0"
+version: '3'
 services:
   app:
+    build: .
     volumes:
-      - ./app:/app
-    build: ./config
-    command: python src.py
-    environment:
-      - ENV_SAMPLE=sample
+      - ./src:/root/src
+    working_dir: /root/src
+    network_mode: "host"
+    tty: true # 標準出力用
