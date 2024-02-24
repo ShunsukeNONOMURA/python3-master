@@ -20,6 +20,6 @@ ENV PATH /root/.local/bin:$PATH
 # Poetryが仮想環境を生成しないようにする
 RUN poetry config virtualenvs.create false
 
-# src/pyproject.tomlからライブラリを初回導入
-COPY src/pyproject.toml .
+# pyproject.tomlからライブラリを初回導入
+COPY volume/pyproject.toml .
 RUN poetry install --no-root

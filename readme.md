@@ -13,5 +13,8 @@ docker compose up
 | コマンド                  | 説明                                       |
 | ------------------------- | ------------------------------------------ |
 | poetry new <project-name> | poetry環境作成                             |
-| poetry add -D <lib>       | ライブラリ追加                             |
+| poetry add -G dev <lib>   | 開発環境ライブラリ追加                     |
+| poetry add <lib>          | 本番環境ライブラリ追加                     |
+| poetry remove <lib>       | ライブラリ削除                             |
 | poetry install --no-root  | pyproject.tomlからライブラリをインストール |
+| poetry run python <file>  | poetry経由でのpython実行                   |

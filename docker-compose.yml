@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - ./src:/root/src
-    working_dir: /root/src
+      - ./volume:/root/volume
+    working_dir: /root/volume
     network_mode: "host"
     tty: true # 標準出力用
